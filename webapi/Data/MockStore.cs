@@ -21,10 +21,7 @@ namespace webapi.Data
             return GetCarById(0);
         }
 
-        public Car NewCommand(Car car)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 
 

@@ -32,7 +32,7 @@ namespace webapi
             services.AddControllers();
             services.AddScoped<IStoreRepo , MockStore>();
             string Password = Configuration["DatabasePass"];
-            _StoreDbConnectionString = String.Concat( Configuration.GetConnectionString("StoreConnection") ,"Password = ", Password , ";");
+            _StoreDbConnectionString = String.Concat( Configuration.GetConnectionString("StoreConnection") ," Password = ", Password , " ; ");
             services.AddDbContext<StoreContext>(opt => opt.UseSqlServer( _StoreDbConnectionString) );
 
         }
