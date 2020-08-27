@@ -30,7 +30,10 @@ namespace webapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IStoreRepo , MockStore>();
+            services.AddScoped<IStoreRepo , SqlStoreRepo>();
+
+            //Retriving Password from UserSecretsId
+            //I have this on my local machine
             string Password = Configuration["DatabasePass"];
             _StoreDbConnectionString = String.Concat( Configuration.GetConnectionString("StoreConnection") ," Password = ", Password , " ; ");
             services.AddDbContext<StoreContext>(opt => opt.UseSqlServer( _StoreDbConnectionString) );

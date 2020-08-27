@@ -5,8 +5,8 @@ namespace webapi.Data
 {
     public interface IStoreRepo
     {
-        IEnumerable<Car> GetCars();
+        List<Car> GetCars();
         Car GetCarById(int id);
-        Car NewCar(Car car);
+        Boolean NewCar(Car car);
     }
 }

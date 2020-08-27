@@ -9,8 +9,9 @@ namespace webapi.Models
     public class Car
     {
         public int Id {get; set; }
-
-       [Required] 
+        public string Name { get; set; }    
+        public string Model { get; set; }
+      
         public User Owner { get; set; }
     }
 }
