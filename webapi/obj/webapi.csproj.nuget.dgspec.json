@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Projects\\DotNetCore\\web\\webapi\\webapi.csproj": {}
+    "C:\\Users\\Hirad\\Desktop\\temp\\webapi\\webapi.csproj": {}
   },
   "projects": {
-    "G:\\Projects\\DotNetCore\\web\\webapi\\webapi.csproj": {
+    "C:\\Users\\Hirad\\Desktop\\temp\\webapi\\webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Projects\\DotNetCore\\web\\webapi\\webapi.csproj",
+        "projectUniqueName": "C:\\Users\\Hirad\\Desktop\\temp\\webapi\\webapi.csproj",
         "projectName": "webapi",
-        "projectPath": "G:\\Projects\\DotNetCore\\web\\webapi\\webapi.csproj",
-        "packagesPath": "C:\\Users\\Developer204\\.nuget\\packages\\",
-        "outputPath": "G:\\Projects\\DotNetCore\\web\\webapi\\obj\\",
+        "projectPath": "C:\\Users\\Hirad\\Desktop\\temp\\webapi\\webapi.csproj",
+        "packagesPath": "C:\\Users\\Hirad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hirad\\Desktop\\temp\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Developer204\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hirad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
@@ -58,6 +62,20 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
             }
           },
           "imports": [
@@ -78,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
