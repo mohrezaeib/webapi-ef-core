@@ -9,8 +9,8 @@ using webapi.InfrastructureEF;
 namespace webapi.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20200829040053_INITH25")]
-    partial class INITH25
+    [Migration("20200830111957_my615554sdv65")]
+    partial class my615554sdv65
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

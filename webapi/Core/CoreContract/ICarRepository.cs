@@ -6,12 +6,16 @@ using webapi.CoreEntities.Models;
 
 namespace webapi.Core.CoreContract
 {
-    interface ICarRepository
+    public interface ICarRepository
     {
          
         List<Car> GetCars();
         Car GetCarById(int id);
-        Boolean NewCar(Car car);
+        Car AddCar(Car car);
+        Car EditCar(Car car);
+
+        Car DeleteCar(int id);
+       // Boolean NewCar(Car car);
     
     }
 }

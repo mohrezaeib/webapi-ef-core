@@ -6,10 +6,10 @@ using webapi.CoreEntities.DTO;
 
 namespace webapi.CoreEntities.DTO
 {
-    public class UserDto
+    public class UserWriteDTO
     {
-        public int Id { get; set; }
+        
         public string Name { get; set; }
-        public List<CarDto> Cars { get; set; }
+        //public List<CarDTO> Cars { get; set; }
     }
 }

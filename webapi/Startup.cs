@@ -13,8 +13,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using webapi.Core.CoreContract;
 using webapi.CoreApplicationServices;
-using webapi.Data;
+
+using webapi.Infrastructure.EF.Repositories;
 using webapi.InfrastructureEF;
 
 namespace webapi
@@ -34,13 +36,18 @@ namespace webapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IGetCarInfo , GetCarInfo>();
+            services.AddScoped<ICarService , CarService>();
+            services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
 
             //Retriving Password from UserSecretsId
             //I have this on my local machine
-            //string Password = Configuration["DatabasePass"];
-            //_StoreDbConnectionString = String.Concat( Configuration.GetConnectionString("StoreConnection") ," Password = ", Password , " ; ");
-            services.AddDbContext<StoreContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            string Password = Configuration["DatabasePass"];
+            _StoreDbConnectionString = String.Concat( Configuration.GetConnectionString("StoreConnection") , Password , " ; ");
+            //hiwa db
+            services.AddDbContext<StoreContext>(opt => opt.UseSqlServer(_StoreDbConnectionString));
+          //  services.AddDbContext<StoreContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             
         }

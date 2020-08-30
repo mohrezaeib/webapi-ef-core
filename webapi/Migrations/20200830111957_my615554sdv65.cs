@@ -2,7 +2,7 @@
 
 namespace webapi.Migrations
 {
-    public partial class INITH25 : Migration
+    public partial class my615554sdv65 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
