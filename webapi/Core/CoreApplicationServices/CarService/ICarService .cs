@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using webapi.Core.CoreEntities.dto.Car;
 using webapi.CoreEntities.DTO;
 using webapi.CoreEntities.Models;
 namespace webapi.CoreApplicationServices
@@ -14,7 +13,7 @@ namespace webapi.CoreApplicationServices
         CarDTO DeleteCar(int Id);
 
         CarDTO EditCar(CarWriteDTO Car, int id );
-        //Boolean NewCar(Car car);
+        
 
     }
 }

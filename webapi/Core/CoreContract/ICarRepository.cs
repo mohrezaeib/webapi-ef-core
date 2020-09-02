@@ -15,7 +15,7 @@ namespace webapi.Core.CoreContract
         Car EditCar(Car car);
 
         Car DeleteCar(int id);
-       // Boolean NewCar(Car car);
+       
     
     }
 }

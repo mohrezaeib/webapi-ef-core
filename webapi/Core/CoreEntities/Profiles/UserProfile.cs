@@ -12,7 +12,8 @@ namespace webapi.Core.CoreEntities.Profiles
     {
         public UserProfile()
         {
-            CreateMap<User, UserDTO>();
+            CreateMap<User, UserReadDTO>();
+            CreateMap<User, UserReadDetailDTO>();
         }
     }
 }

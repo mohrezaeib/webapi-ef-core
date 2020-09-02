@@ -12,8 +12,9 @@ namespace webapi.Infrastructure.EF.Configurations
     {
         public void Configure(EntityTypeBuilder<webapi.CoreEntities.Models.Car> builder)
     {
+            builder.HasKey(x => x.Id);
             builder.HasOne<User>(c => c.Owner).WithMany(o =>o.Cars)
-                    .HasForeignKey(c => c.OwnerID);
+                    .HasForeignKey(c => c.OwnerId);
         }
 }
 }

@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using webapi.Core.CoreContract;
-using webapi.Core.CoreEntities.dto.Car;
 using webapi.CoreApplicationServices;
 using webapi.CoreEntities.DTO;
 using webapi.CoreEntities.Models;

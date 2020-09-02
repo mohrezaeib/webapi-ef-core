@@ -12,7 +12,7 @@ namespace webapi.CoreEntities.Models
         public string Name { get; set; }    
         public string Model { get; set; }
       
-        public User Owner { get; set; }
-        public int OwnerID { get; set; }
+        public virtual User Owner { get; set; }
+        public int OwnerId { get; set; }
     }
 }

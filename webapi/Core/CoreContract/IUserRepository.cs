@@ -6,9 +6,9 @@ using webapi.CoreEntities.Models;
 
 namespace webapi.Core.CoreContract
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
-        User GetUserById(int id);
+        User GetUserDetailById(int id);
         List <User> GetUsers();
 
         User AddUser(User User);

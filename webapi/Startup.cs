@@ -36,7 +36,9 @@ namespace webapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<ICarService , CarService>();
+            services.AddScoped<ICarService, CarService>();
+            services.AddScoped<IUserService, UserService>();
+
             services.AddScoped<ICarRepository, CarRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
 
@@ -46,7 +48,7 @@ namespace webapi
             string Password = Configuration["DatabasePass"];
             _StoreDbConnectionString = String.Concat( Configuration.GetConnectionString("StoreConnection") , Password , " ; ");
             //hiwa db
-            services.AddDbContext<StoreContext>(opt => opt.UseSqlServer(_StoreDbConnectionString));
+            services.AddDbContext<StoreContext>(opt =>  opt.UseLazyLoadingProxies().UseSqlServer(_StoreDbConnectionString)) ;
           //  services.AddDbContext<StoreContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             

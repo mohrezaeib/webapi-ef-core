@@ -15,4 +15,13 @@ namespace webapi.CoreEntities.DTO
         //public UserDTO Owner { get; set; }
         public int OwnerID { get; set; }
     }
+
+    public class CarWriteDTO
+    {
+        public string Name { get; set; }
+        public string Model { get; set; }
+
+        //public UserDTO Owner { get; set; }
+        public int OwnerID { get; set; }
+    }
 }

@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using webapi.Core.CoreEntities.dto.Car;
 using webapi.CoreEntities.DTO;
 using webapi.CoreEntities.Models;
 
